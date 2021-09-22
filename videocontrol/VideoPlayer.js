@@ -276,7 +276,6 @@ export default class VideoPlayer extends Component {
    * @param {object} _err  Err obj returned from <Video> component
    */
   _onError(_err) {
-    console.log('++++++++: ', _err)
     let state = this.state;
     state.error = true;
     state.loading = false;
@@ -1176,7 +1175,6 @@ export default class VideoPlayer extends Component {
 
   renderError() {
     if (this.state.error) {
-      console.log('---: ', this.state.error)
       return (
         <View style={styles.error.container}>
           <Image

@@ -15,7 +15,7 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:4.2.1")
         // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        // in the individual module build.gradle file
     }
 }
 
@@ -35,12 +35,14 @@ allprojects {
         google()
         maven { url 'https://www.jitpack.io' }
         jcenter() {
+            // Added this to fix android build issue related with react-native-video
             content {
                 includeModule("com.yqritc", "android-scalablevideoview")
             }
         }
         jcenter()
         maven {
+            // Add this one to fix android build issue for ExoPlayer building
             url 'https://google.bintray.com/exoplayer/'
         }
     }
